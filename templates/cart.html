@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Cart
+{% endblock %}
+
+{% block main %}
+<div>
+    <table class="table table-striped" >
+        <thead class="table">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Number</th>
+            <th>Total</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+        <tr>
+            <td>{{ product.name }}</td>
+            <td>₹{{ product.price }}/kg</td>
+            <td>{{ product.number }}</td>
+            <td>₹{{ product.total }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+    <center>
+        You need to pay ₹ {{ sum1 }}
+    </center>
+    <br>
+    <form action="/cart" method="post">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="coupon" name = "coupon" placeholder = "ENTER COUPON CODE HERE" type="TEXT">
+                <br>
+                <button type="submit" class="btn btn-secondary">SUBMIT</button>
+            </div>
+    </form>
+</div>
+{% endblock %}

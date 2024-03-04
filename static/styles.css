@@ -1,0 +1,103 @@
+/* === BASE HEADING === */
+
+h1 {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-family: "Courier New", monospace;
+    font-weight: 300;
+    font-size: 40px;
+    color: #080808;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+  }
+
+  h1 span {
+    display: block;
+    font-size: 0.5em;
+    line-height: 1.3;
+  }
+  h1 em {
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  /* === HEADING STYLE #1 === */
+  .one h1 {
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+  }
+  .one h1:before {
+    width: 28px;
+    height: 5px;
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    margin-left: -14px;
+    background-color: #b80000;
+  }
+  .one h1:after {
+    width: 100px;
+    height: 1px;
+    display: block;
+    content: "";
+    position: relative;
+    margin-top: 25px;
+    left: 50%;
+    margin-left: -50px;
+    background-color: #b80000;
+  }
+
+  /* === description === */
+  .description{
+    text-align: center;
+  }
+
+
+  .background {
+    background-image: url('bgimg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+  .card{
+    height: 500px;
+    width: 500px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff);
+  }
+  .card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Adjust the height of the blended area */
+    background: url('bgimg.jpg') center/cover; /* Replace 'your-background-image.jpg' with your actual background image */
+    z-index: -1;
+  }
+  .link{
+    color:rgb(0,0,0);
+  }
+  .category{
+    font:message-box;
+    color:black;
+  }
+  .card-img-top{
+    height:400px;
+  }
+  .image{
+    height: 500px;
+    width: 500px;
+  }
+  .text {
+    color:white;
+  }
+  .thanks{
+    font-family: HelveticaNowMTText;
+  }
+
+

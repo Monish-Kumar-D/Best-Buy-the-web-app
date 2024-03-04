@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block title %}
+Feedback
+{% endblock %}
+{% block main %}
+<form action="/feedback" method="post">
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="feedback" name = "feedback" placeholder = "feedback!!" type="TEXT">
+        <br>
+        <button type="submit" class="btn btn-secondary">SUBMIT</button>
+    </div>
+</form>
+{% endblock %}

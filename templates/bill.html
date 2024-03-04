@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block title %}
+Bill
+{% endblock %}
+{% block main %}
+<div>
+    <p>Here's your bill</p>
+    <table class="table table-striped" >
+        <thead class="table">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Number</th>
+            <th>Total</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+        <tr>
+            <td>{{ product.name }}</td>
+            <td>₹{{ product.price }}/kg</td>
+            <td>{{ product.number }}</td>
+            <td>₹{{ product.total }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+    {{ message }}.
+    <a href="/logout">Logout</a>
+    <br>
+    <a href="/feedback">Feedback</a>
+</div>
+{% endblock %}

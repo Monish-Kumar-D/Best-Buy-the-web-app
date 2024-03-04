@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Showcase
+{% endblock %}
+
+{% block main %}
+  <center>
+  <div class="description">
+      <h2>About us:</h2>
+      <p>Best buy is an online market where we'll provide the best quality Fruits, Vegetables, Pulses, Cereals, Meat and Fishes
+      </p>
+      <img src="static/logo.jpg" alt="logo">
+  </div>
+  </center>
+  <br>
+        <center>
+          {% if session["user_id"] %}
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+              <div class="card">
+                <img src="static/category/Fruits.jpg" class="card-img-top" alt="fruits">
+                <div class="card-body">
+                  <h5 class="card-title"><a class="link" href="/fruits" id="1">Fruits</a></h5>
+                  <p class="card-text">"Discover nature's sweet bounty with our exquisite selection of fresh, vibrant fruits—bursting with flavor and goodness. Elevate your taste experience with our premium, handpicked fruits that redefine freshness."</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="static/category/Vegetables.jpg" class="card-img-top" alt="vegetables">
+                <div class="card-body">
+                  <h5 class="card-title"><a class="link" href="/vegetables" id="2">Vegetables</a></h5>
+                  <p class="card-text">Fresh and locally sourced, our vibrant assortment of vegetables brings farm-fresh goodness to your table. From crisp, colorful bell peppers to leafy greens and robust root vegetables, our selection is a feast for both the eyes and the palate. Elevate your meals with the finest quality produce, delivered with care.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="static/category/Pulses.jpg" class="card-img-top" alt="pulses">
+                <div class="card-body">
+                  <h5 class="card-title"><a class="link" href="/pulses" id="3">Pulses</a></h5>
+                  <p class="card-text">Delight your taste buds with our premium selection of pulses, meticulously sourced for quality and flavor. Packed with essential nutrients, our pulses offer a wholesome addition to your culinary repertoire. Elevate your meals with the excellence of our handpicked pulse varieties.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="static/category/Cereals.jpg" class="card-img-top" alt="cereals">
+                <div class="card-body">
+                  <h5 class="card-title"><a class="link" href="/cereals" id="4">Cereals</a></h5>
+                  <p class="card-text">Introducing our premium cereal selection, a delightful blend of wholesome grains and vibrant flavors crafted to kickstart your day. Elevate your breakfast experience with our nutritious and delicious cereals, thoughtfully designed to fuel your mornings with energy and joy. Breakfast just got better!</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                  <img src="static/category/Meat and fish.jpg" class="card-img-top" alt="meat">
+                  <div class="card-body">
+                    <h5 class="card-title"><a class="link" href="/meat_and_fish" id="5">Meat and fish</a></h5>
+                    <p class="card-text">Delight your taste buds with our premium selection of pulses, meticulously sourced for quality and flavor. Packed with essential nutrients, our pulses offer a wholesome addition to your culinary repertoire. Elevate your meals with the excellence of our handpicked pulse varieties.</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          {% else %}
+          <br>
+          <center>
+                <button type="submit" class="btn btn-secondary"><a  class = "text" href = "/login">Login</a></button>
+                <br>
+                <p> Not having account? </p>
+                <button type="submit" class="btn btn-secondary"><a class = "text" href="/register">Register</a></button>
+        </center>
+        {% endif %}
+{% endblock %}

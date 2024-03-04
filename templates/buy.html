@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %}
+    Buy
+{% endblock %}
+{% block main %}
+<div>
+    {% for p in p %}
+    <center>
+        <p>Total of {{ number }} kgs of {{ p.name }} added to the cart each costs {{ p.price }} </p>
+    </center>
+    <a href="/">Select the category</a>
+    <br>
+    <a href="/cart" method="post">See cart</a>
+    {% endfor %}
+</div>
+{% endblock %}

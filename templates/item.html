@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+{{ product.name }}
+{% endblock %}
+
+{% block main %}
+{% for things in things %}
+<div>
+    <center>
+        <h2><a href="/" class="category">Select the category</a></h2>
+    </center>
+    {% for category in category if category.name in ['Fruits','Vegetables','Pulses','Cereals','Meat and Fish'] %}
+    <center>
+        <h2><a href="/{{ category.name }}" class="category">{{ category.name }}</a></h2>
+    </center>
+    {% endfor %}
+    <img src="static/products/{{ things.name }}.jpg" class="image">
+    <br>
+    <h1>{{ things.name }}</h1>
+    <h3>{{ things.description }}</h3>
+    <h5>Rs.{{ things.price }}/kg</h5>
+    <form action="/buy" method="post">
+        <p>How much do you want?</p>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="{{ things.name }}" name="{{ things.name }}" placeholder="ENTER HERE" type="number" min="1" required>kg
+        </div>
+
+        <button class="btn btn-primary" onclick="openModal()" type="submit" id = "{{ things.name }}">BUY</button>
+    </form>
+</div>
+<script>
+    function openModal(){
+        document.getElementById("{{ things.name }}").style.display = "flex";
+    }
+</script>
+{% endfor %}
+{% endblock %}
