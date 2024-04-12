@@ -3,7 +3,6 @@
 #### Description: Best buy is a web based application which is a Shopping site which is used to buy the products that the seller offers to the sell. This web application is developed using python,javascript,sql,html,css and flask with jinja.
 
 ## Introduction:
-I am Monish Kumar from TamilNadu,India and this is my CS50 Final Project.
 
 This is a web based application which uses python and javascript for programming with sql database (sqlite3),Markup Languages(HTML,CSS) and Flask with jinja.
 
